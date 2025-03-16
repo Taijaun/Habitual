@@ -7,6 +7,7 @@
 
 import Foundation
 
-final class MainListViewModel {
-    
+final class MainListViewModel: ObservableObject {
+    @Published var mainList: [Activity] = []
+    @Published var mockList: [Activity] = Activity.mockData
 }

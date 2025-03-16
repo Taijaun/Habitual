@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct MainListView: View {
+    @StateObject private var viewModel = MainListViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List(Activity.mockData) { activity in
+                VStack(alignment: .leading) {
+                    Text(activity.title)
+                    Text(activity.description)
+                }
+                
+            }
+            .navigationTitle("My Habits")
         }
-        .padding()
     }
 }
 

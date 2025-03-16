@@ -16,10 +16,18 @@ struct Activity: Identifiable, Codable {
 }
 
 
-final class ActivityList: ObservableObject {
-    @Published var listOfActivities: [Activity]
-    
-    init(listOfActivities: [Activity]) {
-        self.listOfActivities = []
-    }
+//final class ActivityList: ObservableObject {
+//    @Published var listOfActivities: [Activity]
+//    
+//    init(listOfActivities: [Activity]) {
+//        self.listOfActivities = []
+//    }
+//}
+
+extension Activity {
+    static let mockData: [Activity] = [
+        Activity(title: "Exercise", description: "Hit the gym", timesCompleted: 5),
+        Activity(title: "Read", description: "Read 10 page sof a book", timesCompleted: 2),
+        Activity(title: "Code", description: "Build your app", timesCompleted: 1)
+    ]
 }
