@@ -68,6 +68,7 @@ struct MainListView: View {
                         }label: {
                             Image(systemName: "plus")
                         }
+                        .tint(.white)
                     }
                 }
             }

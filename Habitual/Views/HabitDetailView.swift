@@ -23,7 +23,8 @@ struct HabitDetailView: View {
             VStack {
                 Text(activity.title)
                     .font(.title.bold())
-                    .padding(.bottom)
+                    .padding(.vertical)
+        
                 
                 Text(activity.description)
                     .font(.title2)
@@ -35,6 +36,7 @@ struct HabitDetailView: View {
             .frame(maxWidth: .infinity)
             .background(.thinMaterial)
             .clipShape(.rect(cornerRadius: 20))
+            .padding(.horizontal, 20)
             
             Spacer()
             Spacer()
@@ -47,6 +49,7 @@ struct HabitDetailView: View {
                     Image(systemName: "plus")
                     
                 }
+                .tint(.white)
             }
             
         }
