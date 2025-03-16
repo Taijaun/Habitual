@@ -10,6 +10,7 @@ import SwiftUI
 struct HabitDetailView: View {
     @State var activity: Activity
     @ObservedObject var mainListVM: MainListViewModel
+    @State private var alertSHowing = false
     
     var body: some View {
         VStack {
@@ -28,8 +29,7 @@ struct HabitDetailView: View {
             Spacer()
             
             Button{
-                mainListVM.updateCompletions(activity: activity)
-                activity.timesCompleted += 1
+                alertSHowing.toggle()
             }label: {
                 HStack{
                     Text("Completed")
@@ -38,6 +38,18 @@ struct HabitDetailView: View {
                 }
             }
             
+        }
+        .alert("Are you sure?", isPresented: $alertSHowing) {
+            Button("Confirm") {
+                mainListVM.updateCompletions(activity: activity)
+                activity.timesCompleted += 1
+                alertSHowing.toggle()
+            }
+            Button("Cancel", role: .cancel){
+                alertSHowing.toggle()
+            }
+        } message: {
+            Text("Are you sure you want to increment this? You will not be able to reduce it.")
         }
         
     }
