@@ -5,6 +5,9 @@
 //  Created by Taijaun Pitt on 16/03/2025.
 //
 
+
+// Make a card view to place text on to look nice
+
 import SwiftUI
 
 struct HabitDetailView: View {
@@ -16,16 +19,24 @@ struct HabitDetailView: View {
         VStack {
             
             Spacer()
-            Text(activity.title)
-                .font(.title.bold())
-                .padding(.bottom)
             
-            Text(activity.description)
-                .font(.title2)
+            VStack {
+                Text(activity.title)
+                    .font(.title.bold())
+                    .padding(.bottom)
+                
+                Text(activity.description)
+                    .font(.title2)
+                
+                Text("Completions: \(activity.timesCompleted)")
+                    .padding(.top)
+            }
+            .padding(.bottom, 30)
+            .frame(maxWidth: .infinity)
+            .background(.thinMaterial)
+            .clipShape(.rect(cornerRadius: 20))
             
-            Text("Completions: \(activity.timesCompleted)")
-                .padding(.top)
-            
+            Spacer()
             Spacer()
             
             Button{
@@ -38,6 +49,14 @@ struct HabitDetailView: View {
                 }
             }
             
+        }
+        .background {
+            Image("vegetables")
+                .resizable()
+                .scaledToFill()
+                .blur(radius: 3)
+                .overlay(Color.cyan.opacity(0.2))
+                .edgesIgnoringSafeArea(.all)
         }
         .alert("Are you sure?", isPresented: $alertSHowing) {
             Button("Confirm") {
