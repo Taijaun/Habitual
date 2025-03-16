@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AddHabitView: View {
     @Environment(\.dismiss) var dismiss
+    @ObservedObject var mainListVM: MainListViewModel
+    
     
     @State private var title: String = ""
     @State private var description: String = ""
@@ -23,6 +25,13 @@ struct AddHabitView: View {
                     TextField("Description", text: $description)
                 }
                 
+                    Button("Add Activity"){
+                        let newActivity = Activity(title: title, description: description)
+                        mainListVM.addActivity(activity: newActivity)
+                        dismiss()
+                    }
+                
+                
             }
             .navigationTitle("New Habit")
         }
@@ -30,5 +39,6 @@ struct AddHabitView: View {
 }
 
 #Preview {
-    AddHabitView()
+    AddHabitView(mainListVM: MainListViewModel())
 }
+

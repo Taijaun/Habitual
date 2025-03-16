@@ -14,7 +14,7 @@ struct MainListView: View {
     
     var body: some View {
         NavigationStack {
-            List(Activity.mockData) { activity in
+            List(viewModel.mainList) { activity in
                 VStack(alignment: .leading) {
                     Text(activity.title)
                         .font(.headline)
@@ -26,7 +26,7 @@ struct MainListView: View {
             .navigationTitle("My Habits")
             // Present the add habit view as a sheet
             .sheet(isPresented: $showAddView, content: {
-                AddHabitView()
+                AddHabitView(mainListVM: viewModel)
             })
             .toolbar{
                 ToolbarItem(placement: .topBarTrailing) {

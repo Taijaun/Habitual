@@ -7,6 +7,11 @@
 
 import Foundation
 
-final class AddHabitViewModel {
+final class AddHabitViewModel: ObservableObject {
+    
+    func createActivity(title: String, description: String) -> Activity {
+        let newActivity = Activity(title: title, description: description)
+        return newActivity
+    }
     
 }

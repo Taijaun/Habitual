@@ -10,4 +10,8 @@ import Foundation
 final class MainListViewModel: ObservableObject {
     @Published var mainList: [Activity] = []
     @Published var mockList: [Activity] = Activity.mockData
+    
+    func addActivity(activity: Activity){
+        mainList.append(activity)
+    }
 }
