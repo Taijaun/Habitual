@@ -14,17 +14,20 @@ struct MainListView: View {
     
     var body: some View {
         NavigationStack {
-            List(viewModel.mainList) { activity in
-                NavigationLink {
-                    HabitDetailView(activity: activity, mainListVM: viewModel)
-                }label:{
-                    VStack(alignment: .leading) {
-                        Text(activity.title)
-                            .font(.headline)
-                        Text(activity.description)
-                            .font(.subheadline)
+            List {
+                ForEach(viewModel.mainList) { activity in
+                    NavigationLink {
+                        HabitDetailView(activity: activity, mainListVM: viewModel)
+                    }label:{
+                        VStack(alignment: .leading) {
+                            Text(activity.title)
+                                .font(.headline)
+                            Text(activity.description)
+                                .font(.subheadline)
+                        }
                     }
                 }
+                .onDelete(perform: viewModel.removeHabit)
             }
             .navigationTitle("My Habits")
             // Present the add habit view as a sheet

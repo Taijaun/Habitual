@@ -27,4 +27,8 @@ final class MainListViewModel: ObservableObject {
         guard let oldIndex = oldIndex else {return}
         mainList[oldIndex] = newActivity
     }
+    
+    func removeHabit(at offsets: IndexSet){
+        mainList.remove(atOffsets: offsets)
+    }
 }
