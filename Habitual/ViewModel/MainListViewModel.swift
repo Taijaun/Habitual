@@ -8,8 +8,24 @@
 import Foundation
 
 final class MainListViewModel: ObservableObject {
-    @Published var mainList: [Activity] = []
-    @Published var mockList: [Activity] = Activity.mockData
+    @Published var mainList = [Activity]() {
+        didSet {
+            if let encoded = try? JSONEncoder().encode(mainList) {
+                UserDefaults.standard.set(encoded, forKey: "Activities")
+            }
+        }
+    }
+    
+    init() {
+        if let savedActivities = UserDefaults.standard.data(forKey: "Activities") {
+            if let decodedActivities = try? JSONDecoder().decode([Activity].self, from: savedActivities){
+                mainList = decodedActivities
+                return
+            }
+        }
+        
+        mainList = []
+    }
     
     func addActivity(activity: Activity){
         mainList.append(activity)
