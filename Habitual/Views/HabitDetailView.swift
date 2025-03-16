@@ -13,14 +13,19 @@ struct HabitDetailView: View {
     
     var body: some View {
         VStack {
+            
+            Spacer()
             Text(activity.title)
+                .font(.title.bold())
+                .padding(.bottom)
+            
             Text(activity.description)
+                .font(.title2)
+            
+            Spacer()
             
             Button{
-                let activityCopy = activity
-                var newActivity = activity
-                newActivity.timesCompleted += 1
-                mainListVM.updateCompletions(newActivity: newActivity, oldActivity: activityCopy)
+                mainListVM.updateCompletions(activity: activity)
                 activity.timesCompleted += 1
             }label: {
                 HStack{

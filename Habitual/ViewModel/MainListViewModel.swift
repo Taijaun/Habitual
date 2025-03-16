@@ -15,9 +15,13 @@ final class MainListViewModel: ObservableObject {
         mainList.append(activity)
     }
     
-    func updateCompletions(newActivity: Activity, oldActivity: Activity){
+    func updateCompletions(activity: Activity){
+        let activityCopy = activity
+        var newActivity = activity
+        newActivity.timesCompleted += 1
+        
         //use oldActivity to find where the previous activity was
-        let oldIndex = mainList.firstIndex(of: oldActivity)
+        let oldIndex = mainList.firstIndex(of: activityCopy)
         
         //replace that index with newActivity
         guard let oldIndex = oldIndex else {return}
