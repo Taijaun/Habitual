@@ -24,6 +24,10 @@ struct MainListView: View {
                 
             }
             .navigationTitle("My Habits")
+            // Present the add habit view as a sheet
+            .sheet(isPresented: $showAddView, content: {
+                AddHabitView()
+            })
             .toolbar{
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {

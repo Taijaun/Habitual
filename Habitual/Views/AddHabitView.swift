@@ -10,8 +10,22 @@ import SwiftUI
 struct AddHabitView: View {
     @Environment(\.dismiss) var dismiss
     
+    @State private var title: String = ""
+    @State private var description: String = ""
+    @State private var completions: Int = 0
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            Form{
+                VStack{
+                    TextField("Habit title", text: $title)
+                    TextField("Description", text: $description)
+                }
+                
+            }
+            .navigationTitle("New Habit")
+        }
     }
 }
 

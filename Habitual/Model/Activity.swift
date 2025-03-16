@@ -12,7 +12,7 @@ struct Activity: Identifiable, Codable {
     var id = UUID()
     let title: String
     let description: String
-    var timesCompleted: Int
+    var timesCompleted: Int = 0
 }
 
 
@@ -27,7 +27,7 @@ struct Activity: Identifiable, Codable {
 extension Activity {
     static let mockData: [Activity] = [
         Activity(title: "Exercise", description: "Hit the gym", timesCompleted: 5),
-        Activity(title: "Read", description: "Read 10 page sof a book", timesCompleted: 2),
+        Activity(title: "Read", description: "Read 10 pages of a book", timesCompleted: 2),
         Activity(title: "Code", description: "Build your app", timesCompleted: 1)
     ]
 }
