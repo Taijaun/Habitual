@@ -22,6 +22,9 @@ struct HabitDetailView: View {
             Text(activity.description)
                 .font(.title2)
             
+            Text("Completions: \(activity.timesCompleted)")
+                .padding(.top)
+            
             Spacer()
             
             Button{
@@ -29,7 +32,7 @@ struct HabitDetailView: View {
                 activity.timesCompleted += 1
             }label: {
                 HStack{
-                    Text("Current completions: \(activity.timesCompleted)")
+                    Text("Completed")
                     Image(systemName: "plus")
                     
                 }

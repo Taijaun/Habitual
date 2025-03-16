@@ -20,20 +20,21 @@ struct AddHabitView: View {
     var body: some View {
         NavigationStack {
             Form{
-                VStack{
-                    TextField("Habit title", text: $title)
-                    TextField("Description", text: $description)
-                }
-                
+                Section("Add new Habit"){
+                    VStack{
+                        TextField("Habit title", text: $title)
+                        TextField("Description", text: $description)
+                    }
+                    
                     Button("Add Activity"){
                         let newActivity = Activity(title: title, description: description)
                         mainListVM.addActivity(activity: newActivity)
                         dismiss()
                     }
-                
-                
+                    
+                }
             }
-            .navigationTitle("New Habit")
+            .navigationTitle("Habit")
         }
     }
 }
