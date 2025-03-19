@@ -23,7 +23,7 @@ A simple and effective habit-tracking app that helps users stay consistent with 
 ⸻
 
 📲 Installation
-	1.	Ensure you have Xcode installed on your Mac.
+	1.	Ensure you have Xcode installed on your Mac.<br>
 	2.	Clone this repository:
 
 git clone https://github.com/Taijaun/Habitual.git
@@ -34,7 +34,7 @@ git clone https://github.com/Taijaun/Habitual.git
 
 ⸻
 
-🏃‍♂️ Usage
+🏃‍♂️ Usage<br>
 	1.	Open the app and tap the + button to create a new habit.<br>
 	2.	Enter a title and description for the habit.<br>
 	3.	The habit appears on the home screen with all previously created habits.<br>
