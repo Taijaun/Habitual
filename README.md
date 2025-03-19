@@ -6,12 +6,12 @@ A simple and effective habit-tracking app that helps users stay consistent with 
 
 ⸻
 
-🚀 Features
-	•	Custom Habit Creation – Users can add new habits with a title and description.
-	•	Habit List – All created habits are displayed on the home screen.
-	•	Detailed Habit View – Tapping a habit shows more details, including its completion count.
-	•	Progress Tracking – Users can increment the completion count each time they perform the habit.
-	•	Persistent Data – All habits and progress are saved using UserDefaults, ensuring no data is lost.
+🚀 Features<br>
+	•	Custom Habit Creation – Users can add new habits with a title and description.<br>
+	•	Habit List – All created habits are displayed on the home screen.<br>
+	•	Detailed Habit View – Tapping a habit shows more details, including its completion count.<br>
+	•	Progress Tracking – Users can increment the completion count each time they perform the habit.<br>
+	•	Persistent Data – All habits and progress are saved using UserDefaults, ensuring no data is lost.<br>
 	•	Clean & Intuitive UI – Built with SwiftUI for a smooth user experience.
 
 ⸻
