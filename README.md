@@ -35,12 +35,12 @@ git clone https://github.com/Taijaun/Habitual.git
 ⸻
 
 🏃‍♂️ Usage
-	1.	Open the app and tap the + button to create a new habit.
-	2.	Enter a title and description for the habit.
-	3.	The habit appears on the home screen with all previously created habits.
-	4.	Tap a habit to view its details and track progress.
-	5.	Press the increment button to log each completion of the habit.
-	6.	All data is saved automatically, so progress is never lost.
+	1.	Open the app and tap the + button to create a new habit.<br>
+	2.	Enter a title and description for the habit.<br>
+	3.	The habit appears on the home screen with all previously created habits.<br>
+	4.	Tap a habit to view its details and track progress.<br>
+	5.	Press the increment button to log each completion of the habit.<br>
+	6.	All data is saved automatically, so progress is never lost.<br>
 
 ⸻
 
