@@ -26,7 +26,7 @@ A simple and effective habit-tracking app that helps users stay consistent with 
 	1.	Ensure you have Xcode installed on your Mac.
 	2.	Clone this repository:
 
-git clone https://github.com/yourusername/Habitual.git
+git clone https://github.com/Taijaun/Habitual.git
 
 
 	3.	Open the project in Xcode.
