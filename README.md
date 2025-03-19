@@ -16,13 +16,13 @@ A simple and effective habit-tracking app that helps users stay consistent with 
 
 ⸻
 
-🛠 Technologies Used
-	•	SwiftUI – Modern declarative UI framework.
-	•	UserDefaults – Lightweight data persistence for saving habits and progress.
+🛠 Technologies Used<br>
+	•	SwiftUI – Modern declarative UI framework.<br>
+	•	UserDefaults – Lightweight data persistence for saving habits and progress.<br>
 
 ⸻
 
-📲 Installation
+📲 Installation<br>
 	1.	Ensure you have Xcode installed on your Mac.<br>
 	2.	Clone this repository:
 
